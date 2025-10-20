@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Me - Songlin Zhao</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+  </style>
+
+  <script>
+    class HelloWorldTag extends HTMLElement {
+      connectedCallback() {
+        console.log('Hello world!');
+      }
+    }
+
+    customElements.define('hello-world-tag', HelloWorldTag);
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span><b>Songlin Zhao</b></span>
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="files/resume.pdf">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="./blog/blog.html">Blogs</a></li>
+        <li><a href="experiments.html">Experiments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="home-left">
+      <img src="./images/avatar.JPG" alt="An avatar of Songlin Zhao" width="150">
+      <h3>Songlin Zhao</h3>
+      <div>
+        <p>
+          Master's student at UCSD majoring in Computer Science
+        </p>
+        <div class="label">My Master's Progress: 3 / 5</div>
+        <progress value="3" max="5" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"></progress>
+      </div>
+      <i>La Jolla, CA</i><br>
+      <a href="mailto:zhaosonglin2024@gmail.com">Email</a><br>
+      <a href="https://www.linkedin.com/in/songlin-zhao/">LinkedIn</a><br>
+      <a href="https://github.com/thiefCat">Github</a>
+    </div>
+  
+    <div class="home-right">
+      <section>
+
+        <h2>About Me</h2>
+        <p>
+          Hi! My name is <strong>Songlin Zhao</strong>. I am a graduate student at the <b>University of California, San Diego</b>. My major is Computer
+          Science.
+          I love learning various Computer Science Knowledge. Previously, I was a <em>Backend Development Intern at
+          Alibaba Cloud</em>,
+          where I gained hands-on experience with large-scale systems. I'm always eager to dive in, experiment, and
+          bring ideas to life!
+        </p>
+      </section>
+  
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out to me via <a href="mailto:zhaosonglin2024@gmail.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/songlin-zhao/">LinkedIn</a> and <a href="https://github.com/thiefCatd">Github</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <hr>
+  <footer>
+    <p>© 2025 Songlin Zhao</p>
+    <hello-world-tag></hello-world-tag>
+  
+    <noscript>Please enable JavaScript for the full experience.</noscript>
+  </footer>
+
+</body>

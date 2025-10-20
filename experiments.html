@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Experiment</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span><b>Songlin Zhao</b></span>
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="files/resume.pdf">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="./blog/blog.html">Blogs</a></li>
+        <li><a href="experiments.html">Experiments</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <h3>Template Tag</h3>
+    <template>
+      <h2>My Template</h2>
+    </template>
+
+    <h3>Pricture & Source Tag</h3>
+    <picture>
+      <source media="(min-width: 768px)" srcset="./blog/images/background-pc.jpg">
+      <img src="./blog/images/background-mobile.jpg" alt="A scenic background for the blog." width="600">
+    </picture>
+
+    <h3>Audio Tag</h3>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video Tag</h3>
+    <video width="320" height="240" controls>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Canvas Tag</h3>
+    <canvas id="myCanvas" width="200" height="100" style="border:solid;">
+      Your browser does not support the HTML canvas tag.
+    </canvas>
+  </div>
+
+  <script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.fillText("Hello World", 10, 50);
+  </script>
+</body>

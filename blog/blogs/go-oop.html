@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE224 - Go OOP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span><b>Songlin's Space</b></span>
+      <ul>
+        <li><a href="../../index.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="blog-post">
+      <h1>CSE224 - Go OOP</h1>
+      <h2>Introduction</h2>
+      <section>
+        <h3>Go Routines</h3>
+        <p>Traditionally, people used OS-level threads for concurrency, but threads are heavyweight. Go introduced
+          goroutines, which are:</p>
+        <ol>
+          <li>Very cheap in terms of memory</li>
+          <li>Managed by the Go runtime, not the OS</li>
+          <li>Can be created in large numbers</li>
+        </ol>
+      </section>
+
+      <section>
+        <h3>Channel</h3>
+        <p>A channel is a way for goroutines to communicate and synchronize with each other. It's like a pipe.</p>
+        <pre><code>
+          ch := make(chan string)
+          go func() {
+              ch <- "hello"
+          }()
+
+          msg := <-ch
+          fmt.Println(msg) // prints: hello
+        </code></pre>
+      </section>
+
+      <hr>
+      <div>
+        CSE224 &nbsp; 
+        <span>
+          <a href="#" title="return to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 19V5m-7 7l7-7 7 7" />
+            </svg>
+          </a>
+        </span>
+      </div>
+
+      <section id="comments">
+        <h3>Comments</h3>
+        <form>
+          <fieldset>
+            <legend>Leave a Comment</legend>
+
+            <label for="nickname">Nickname:</label><br>
+            <input type="text" id="nickname" name="nickname"><br>
+            <label for="comment-text">Your Comment:</label><br>
+            <textarea id="comment-text" name="comment-text" rows="8" cols="50"></textarea><br>
+
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+      </section>
+
+    </article>
+    <dialog>
+      <h3>Article Contributors</h3>
+      <ul>
+        <li>Songlin Zhao</li>
+        <li>John Doe</li>
+      </ul>
+    </dialog>
+  </main>
+
+  <footer>
+    <p>© 2025 Songlin Zhao</p>
+    <hello-world-tag></hello-world-tag>
+    <noscript>Please enable JavaScript for the full experience.</noscript>
+  </footer>
+</body>
+
+</html>
