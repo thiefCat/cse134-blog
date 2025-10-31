@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Inter', sans-serif;
+  --border-color: #eee;
+  --text-color: #333;
+  --nav-color: #4f4242;
+}
+
+html {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+body {
+  flex-direction: column;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #fff;
+  position: relative; 
+  border-bottom: 1px solid #eee;
+}
+
+main {
+  flex-grow: 1; /* push footer to the bottom */
+  font-family: var(--font-body);
+  
+}
+
+header {
+  font-family: var(--font-heading);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+.nav-clickable {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: var(--nav-color, #333);
+  padding: 0.8rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-clickable:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.nav-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--nav-color, #333);
+  text-decoration: none; /* remove underline */
+  padding: 0.8rem 0.2rem;
+}
+
+
+footer {
+  border-top: 1px solid #eee;
+}
