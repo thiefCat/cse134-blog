@@ -25,6 +25,7 @@ header {
   top: 0;
   border-bottom: 1px solid #eee;
   font-family: var(--font-heading);
+  margin: 0;
 }
 
 main {
