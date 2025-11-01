@@ -5,7 +5,7 @@
   --font-heading: 'Inter', sans-serif;
   --border-color: #eee;
   --text-color: #333;
-  --nav-color: #4f4242;
+  --nav-color: #777;
 }
 
 html {
@@ -17,23 +17,19 @@ body {
   flex-direction: column;
   min-height: 100dvh;
   display: flex;
-  flex-direction: column;
 }
 
 header {
   background: #fff;
-  position: relative; 
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid #eee;
+  font-family: var(--font-heading);
 }
 
 main {
   flex-grow: 1; /* push footer to the bottom */
   font-family: var(--font-body);
-  
-}
-
-header {
-  font-family: var(--font-heading);
 }
 
 nav {
@@ -41,6 +37,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1160px;
 
   & ul {
     display: flex;
@@ -48,7 +47,6 @@ nav {
     margin: 0;
     padding: 0;
   }
-
 }
 
 .nav-clickable {
@@ -71,12 +69,93 @@ nav {
 .nav-brand {
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--nav-color, #333);
+  color: #5a5353;
   text-decoration: none; /* remove underline */
-  padding: 0.8rem 0.2rem;
+  padding: 0.8rem 2rem;
 }
 
+.nav-active {
+  color: blue;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  max-width: 1160px;
+}
+
+.home-left {
+  flex-basis: 250px;
+  flex-shrink: 0;
+  padding: 2rem 2rem;
+}
+
+.home-left > img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+.home-left a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--font-body);
+  display: block; 
+  padding-top: .6rem;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.home-right {
+  flex-grow: 1;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 1160px;
+}
+
+.projects-container h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.projects-container h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: .5px;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  transition: box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
 
 footer {
   border-top: 1px solid #eee;
+  text-align: center;
+  padding: .6rem 0;
+  font-size: 0.8rem;
+  color: #777;
 }
