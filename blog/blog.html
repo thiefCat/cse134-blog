@@ -24,20 +24,23 @@
   </header>
 
   <main>
-    <!-- <h1>Songlin's Personal Website</h1> -->
-    <picture>
+    <picture class="blog-banner">
       <source media="(min-width: 768px)" srcset="images/background-pc.jpg">
+      <div class="blog-intro">
+        <h1>Songlin's Personal Website</h1>
+      </div>
       <img src="images/background-mobile.jpg" alt="A scenic background for the blog." width="600">
     </picture>
 
 
-    <section id="blog-posts">
+    <section class="blog-posts">
 
       <blog-card>
         <h2><a href="blogs/go-concurrency.html">CSE224 - Go Concurrent Programming</a></h2>
         <p>This blog introduces Go routine and channels.</p>
         <div class="card-footer">
-          <span>2025-05-10</span> | <span>CSE224</span>
+          <span>2025-05-10</span> 
+          <span>CSE224</span>
         </div>
       </blog-card>
       
@@ -45,7 +48,8 @@
         <h2><a href="blogs/go-oop.html">CSE224 - Go OOP</a></h2>
         <p>This blog introduces OOP in Go.</p>
         <div class="card-footer">
-          <span>2025-05-08</span> | <span>CSE224</span>
+          <span>2025-05-08</span>
+          <span>CSE224</span>
         </div>
       </blog-card>
 

@@ -37,38 +37,31 @@
         <h3>Channel</h3>
         <p>A channel is a way for goroutines to communicate and synchronize with each other. It's like a pipe.</p>
         <pre><code>
-          ch := make(chan string)
-          go func() {
-              ch <- "hello"
-          }()
+  ch := make(chan string)
+  go func() {
+      ch <- "hello"
+  }()
 
-          msg := <-ch
-          fmt.Println(msg) // prints: hello
+  msg := <-ch
+  fmt.Println(msg) // prints: hello
         </code></pre>
       </section>
 
       <hr>
       <div>
-        CSE224 &nbsp; 
-        <span>
-          <a href="#" title="return to top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 19V5m-7 7l7-7 7 7" />
-            </svg>
-          </a>
-        </span>
+        CSE224
       </div>
 
-      <section id="comments">
-        <h3>Comments</h3>
+      <section class="comments">
+        <h2>Comments</h2>
         <form>
           <fieldset>
             <legend>Leave a Comment</legend>
 
-            <label for="nickname">Nickname:</label><br>
-            <input type="text" id="nickname" name="nickname"><br>
-            <label for="comment-text">Your Comment:</label><br>
-            <textarea id="comment-text" name="comment-text" rows="8" cols="50"></textarea><br>
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname">
+            <label for="comment-text">Your Comment:</label>
+            <textarea id="comment-text" name="comment-text" rows="8" cols="50"></textarea>
 
             <button type="submit">Send</button>
           </fieldset>
