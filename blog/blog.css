@@ -6,6 +6,14 @@
   --border-color: #eee;
   --text-color: #333;
   --nav-color: #777;
+      
+  color-scheme: light dark;
+  --light-main-bg: #fff;
+  --light-all-bg: #f4f4f5;
+  --light-color: #333;
+  --dark-main-bg: #211F26;
+  --dark-all-bg: #141218;
+  --dark-color: #E6E0E9;
 }
 
 html {
@@ -17,7 +25,8 @@ body {
   flex-direction: column;
   min-height: 100dvh;
   display: flex;
-  background-color: #f4f4f5;
+  background-color: light-dark(var(--light-all-bg), var(--dark-all-bg));
+  color: light-dark(var(--light-color), var(--dark-color));
   margin: 0;
 }
 
@@ -30,7 +39,7 @@ header {
 }
 
 main {
-  flex-grow: 1; /* push footer to the bottom */
+  flex-grow: 1;
   font-family: var(--font-body);
 }
 
@@ -42,7 +51,6 @@ nav {
   margin: 0 auto;
   padding: 0 1rem;
   max-width: 1160px;
-
   & ul {
     display: flex;
     list-style: none;
@@ -71,7 +79,7 @@ nav {
   font-size: 1.3rem;
   font-weight: 600;
   color: #ccc;
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
   padding: 0.8rem 2rem;
 }
 
@@ -82,16 +90,16 @@ main > picture {
   min-height: 250px;
 }
 
-main > picture > img {
+.hero-section > picture > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.blog-banner {
-	display: block;
+.hero-section {
+  display: block;
   width: 100%;
-  height: 90%;
+  height: 60dvh;
   min-height: 250px;
   background-color: #555;
   position: relative;
@@ -110,6 +118,26 @@ main > picture > img {
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.blog-intro h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 6vw, 2.5rem);
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end) forwards;
+  width: 0;
+  max-width: 90%;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
 .blog-posts {
@@ -117,7 +145,7 @@ main > picture > img {
   max-width: 900px;
   margin: -80px auto 40px auto;
   padding: 1.5rem 3rem;
-  background: #fff;
+  background-color: light-dark(var(--light-main-bg), var(--dark-main-bg));
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -131,11 +159,10 @@ blog-card {
   font-family: var(--font-body);
 }
 
-
 blog-card h2 a {
-  color: var(--text-color);
+  color: light-dark(var(--light-color), var(--dark-color));
   text-decoration: none;
-	transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 blog-card h2 a:hover {
@@ -143,7 +170,7 @@ blog-card h2 a:hover {
 }
 
 .card-footer {
-	font-size: 0.9rem;
+  font-size: 0.9rem;
   color: #888;
 }
 
@@ -156,15 +183,15 @@ blog-card h2 a:hover {
   max-width: 900px;
   margin: 40px auto;
   padding: 1.5rem 3rem;
-  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background-color: light-dark(var(--light-main-bg), var(--dark-main-bg));
   position: relative;
   z-index: 2;
 }
 
 .blog-post pre {
-  background-color: #f4f7f8;
+  background-color: light-dark(var(--light-main-bg), var(--dark-main-bg));
   border: 1px solid #e0e6e8;
   border-radius: 4px;
   padding: 1rem;
@@ -227,4 +254,3 @@ footer {
   font-size: 0.8rem;
   color: #777;
 }
-
