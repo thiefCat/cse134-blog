@@ -1,0 +1,133 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --input-bg: #fdfdfe;
+    --border-color: #cbd5e0;
+}
+
+body.dark-mode {
+    --bg-color: #1a202c;
+    --text-color: #e2e8f0;
+    --input-bg: #2d3748;
+    --border-color: #4a5568;
+}
+
+input, textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+#theme-toggle {
+    display: none; 
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0rem 2rem 2rem 2rem;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem; 
+    margin-top: 1rem; 
+}
+
+label:after {
+    content: ' *';
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4299e1;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #4299e1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+output {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    min-height: 1.5em;
+    border: 1px dashed #e2e8f0;
+}
+
+input:user-invalid,
+textarea:user-invalid {
+    border-color: #e53e3e;
+}
+
+
+input:user-valid,
+textarea:user-valid {
+    border-color: green;
+}
+
+@keyframes flash-red {
+    0% { background-color: #fff; }
+    50% { background-color: #fca5a5; }
+    100% { background-color: #fff; }
+}
+
+.field-flash {
+    animation: flash-red 0.5s ease-in-out;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.count-warning {
+    color: orange;
+    font-weight: bold;
+}
+
+.count-error {
+    color: red;
+    font-weight: bold;
+}
