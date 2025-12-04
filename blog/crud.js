@@ -11,7 +11,6 @@ const linkInput = document.getElementById('link');
 const btnCreate = document.getElementById('btn-create');
 const btnUpdate = document.getElementById('btn-update');
 const btnDelete = document.getElementById('btn-delete');
-const btnCancel = document.getElementById('btn-cancel');
 const createGroup = document.getElementById('create-btn-group');
 const editGroup = document.getElementById('edit-btn-group');
 
@@ -110,10 +109,5 @@ btnDelete.addEventListener('click', () => {
   editGroup.style.display = 'none';
 });
 
-
-btnCancel.addEventListener('click', () => {
-  selector.value = "-1";
-  selector.dispatchEvent(new Event('change'));
-});
 
 initSelector();
