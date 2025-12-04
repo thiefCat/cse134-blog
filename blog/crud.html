@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Manager</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, textarea, select { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+    button { margin-top: 20px; padding: 10px 20px; cursor: pointer; }
+    .btn-create { background-color: #28a745; color: white; border: none; }
+    .btn-update { background-color: #ffc107; border: none; }
+    .btn-delete { background-color: #dc3545; color: white; border: none; }
+    hr { margin: 20px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Blog Manager</h1>
+  <a href="blog.html">← Back to Blog Page</a>
+
+  <hr>
+
+  <label>Select a Post to Edit/Delete:</label>
+  <select id="post-selector">
+    <option value="-1">-- Create New Post --</option>
+  </select>
+
+  <hr>
+
+  <form id="blog-form">
+    <label>Title</label>
+    <input type="text" id="title" placeholder="Blog Title">
+
+    <label>Date</label>
+    <input type="date" id="date">
+
+    <label>Tag</label>
+    <input type="text" id="tag">
+
+    <label>Description</label>
+    <textarea id="description" rows="3"></textarea>
+
+    <label>Image URL</label>
+    <input type="text" id="imgSrc" placeholder="images/example.png">
+    
+    <label>Link URL</label>
+    <input type="text" id="link" placeholder="blogs/example.html">
+
+    <div id="create-btn-group">
+      <button type="button" class="btn-create" id="btn-create">Create New Post</button>
+    </div>
+
+    <div id="edit-btn-group" style="display: none;">
+      <button type="button" class="btn-update" id="btn-update">Update Post</button>
+      <button type="button" class="btn-delete" id="btn-delete">Delete Post</button>
+      <button type="button" id="btn-cancel">Cancel</button>
+    </div>
+  </form>
+
+  <script src="crud.js"></script>
+</body>
+</html>

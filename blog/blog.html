@@ -8,9 +8,8 @@
   <title>Home - Songlin's Space</title>
 
   <link rel="stylesheet" href="blog.css">
-
-  <script>
-  </script>
+  <script src="card.js" defer></script>
+  <script src="loadData.js" defer></script>
 </head>
 
 <body>
@@ -19,6 +18,7 @@
       <a href="blog.html" class="nav-brand"><b>Songlin's Space</b></a>
       <ul>
         <li><a href="../index.html" class="nav-clickable">About Me</a></li>
+        <li><a href="./crud.html" class="nav-clickable">CRUD</a></li>
       </ul>
     </nav>
   </header>
@@ -33,28 +33,12 @@
         <h1>Songlin's Personal Website</h1>
       </div>
     </div>
-
-
     <section class="blog-posts">
-
-      <blog-card>
-        <h2><a href="blogs/go-concurrency.html">CSE224 - Go Concurrent Programming</a></h2>
-        <p>This blog introduces Go routine and channels.</p>
-        <div class="card-footer">
-          <span>2025-05-10</span> 
-          <span>CSE224</span>
-        </div>
-      </blog-card>
-      
-      <blog-card>
-        <h2><a href="blogs/go-oop.html">CSE224 - Go OOP</a></h2>
-        <p>This blog introduces OOP in Go.</p>
-        <div class="card-footer">
-          <span>2025-05-08</span>
-          <span>CSE224</span>
-        </div>
-      </blog-card>
-
+      <div>
+        <button id="load-local">Load Local</button>
+        <button id="load-remote">Load Remote</button>
+      </div>
+      <output id="card-list"></output>
     </section>
   </main>
 
